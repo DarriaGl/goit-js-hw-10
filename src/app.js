@@ -10,7 +10,7 @@ const breedDescription = document.getElementById('breed-description');
 const breedTemperament = document.getElementById('breed-temperament');
 
 breedSelect.addEventListener('change', () => {
-  const selectedBreedId = breedSelect.selectedValue;
+  const selectedBreedId = breedSelect.value;
 
   showLoader();
 
