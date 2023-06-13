@@ -1,15 +1,15 @@
 .loader {
-    display: none;
-    /* Стилі для завантажувача */
-  }
-  
-  .error {
-    display: none;
-    /* Стилі для повідомлення про помилку */
-  }
-  
-  .cat-info {
-    display: none;
-    /* Стилі для блоку інформації про кота */
-  }
-  
+  display: none;
+}
+
+.error {
+  display: none;
+}
+
+.cat-info {
+  display: none;
+}
+#cat-image {
+  width: 200px;
+  height: auto;
+}

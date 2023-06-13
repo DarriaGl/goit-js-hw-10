@@ -2,7 +2,7 @@ import { fetchBreeds, fetchCatByBreed } from './cat-api.js';
 
 const loader = document.querySelector('.loader');
 const error = document.querySelector('.error');
-const breedSelect = document.querySelector('.breed-select');
+const breedSelect = document.querySelector('#breed-select');
 const catInfo = document.querySelector('.cat-info');
 const catImage = document.getElementById('cat-image');
 const breedName = document.getElementById('breed-name');
@@ -19,6 +19,7 @@ breedSelect.addEventListener('change', () => {
       displayCatInfo(cat);
     })
     .catch(() => {
+      console.error('Error fetching cat:', error);
       hideLoader();
       showError();
     });
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hideLoader();
     })
     .catch(() => {
+      console.error('Error fetching breeds:', error);
       hideLoader();
       showError();
     });
