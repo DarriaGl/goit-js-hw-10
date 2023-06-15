@@ -17,6 +17,7 @@ breedSelect.addEventListener('change', () => {
   fetchCatByBreed(selectedBreedId)
     .then(cat => {
       displayCatInfo(cat);
+      hideLoader();
     })
     .catch(() => {
       console.error('Error fetching cat:', error);
@@ -73,5 +74,7 @@ function hideLoader() {
 }
 
 function showError() {
+  error.style.display = 'block';
+  catInfo.style.display = 'none';
   error.style.display = 'block';
 }
